@@ -1,0 +1,16 @@
+#kakao pay
+kakao:
+  admin:
+    key: "api를 입력하세요 ^^"
+  host: https://kapi.kakao.com
+  uri:
+    approval: /api/order/completed
+    cancel: /api/order/cancel
+    fail: /api/order/fail
+  pay:
+    ready: /v1/payment/ready
+    approve: /v1/payment/approve
+    cid: TC0ONETIME
+    taxfree: 1000
+    cancel: /v1/payment/cancel
+    order: /v1/payment/order

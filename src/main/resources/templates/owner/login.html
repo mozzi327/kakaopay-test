@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        .form {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .form > input {
+            margin: 20px 0;
+            width: 70%;
+            height: 30px;
+        }
+    </style>
+</head>
+<body>
+<form method="POST" th:action="@{' '}">
+    <div class="form">
+        <input type="text" id="name" name="username">
+        <input type="password" name="password">
+        <input type="submit" value="로그인">
+        <div>
+            <input type="checkbox" name="remember-me"> 자동 로그인 </input>
+            <input type="checkbox" name="remember"> 아이디 저장</input>
+        </div>
+
+        <div th:if="${param.error}">
+            <div class="field-error">
+                사용자ID 또는 비밀번호를 확인해 주세요.
+            </div>
+        </div>
+    </div>
+</form>
+</body>
+</html>
